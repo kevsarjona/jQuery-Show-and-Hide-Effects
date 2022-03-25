@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Toggle Effect</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #FF6772;
+      	font: 25px sans-serif;
+    }
+  
+  	p.highlight{
+      background: #FE0C40;
+      color: white;
+  	}
+  
+</style>
+<script>
+$(document).ready(function(){
+    // Toggles paragraphs display
+    $(".toggle-btn").click(function(){
+        $("p").toggle();
+    });
+  
+  	$("p").hover(function(){
+        	$(this).addClass("highlight");
+    	}, function(){
+        	$(this).removeClass("highlight");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Menu</button> 
+    <p>Contact</p>
+  	<p>Media</p>
+  	<p>Services</p>
+    <p>Content</p>
+</body>
+</html>                                		
