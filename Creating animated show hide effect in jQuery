@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Animated Show Hide Effects</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #D2FFE0;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    // Hide displayed paragraphs with different speeds
+    $(".hide-btn").click(function(){
+        $("p.normal").hide();
+        $("p.fast").hide("fast");
+        $("p.slow").hide("slow");
+       
+    });
+    
+    // Show hidden paragraphs with different speeds
+    $(".show-btn").click(function(){
+        $("p.normal").show();
+        $("p.fast").show("fast");
+        $("p.slow").show("slow");
+        
+      	
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="hide-btn">Hide Paragraphs</button> 
+    <button type="button" class="show-btn">Show Paragraphs</button>
+    
+    <p class="normal">Lorem Ipsum</p>
+    <p class="fast">Lorem Ipsum</p>
+    <p class="slow">Lorem Ipsum</p>
+  
+    <p class="normal">Lorem Ipsum</p>
+  	<p class="normal">Lorem Ipsum</p>
+</body>
+</html>
